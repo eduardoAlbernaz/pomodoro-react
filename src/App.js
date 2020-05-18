@@ -43,7 +43,7 @@ class App extends Component {
     this.setState(state => ({
       running: true,
       interval: setInterval(this.tick, 1000),
-      time: state.time > 0 ? state.time : 1500
+      time: state.time > 0 ? state.time : state.selectedType.time
     }))
   }
 
@@ -51,7 +51,7 @@ class App extends Component {
     this.stopInterval()
     this.setState(state => ({
       running: false,
-      time: 300
+      time: state.selectedType.time
     }))
   }
 
@@ -68,7 +68,7 @@ class App extends Component {
 
   getProgress = () => {
     const current = this.state.time;
-    const total = 300;
+    const total = this.state.selectedType.time;
     return ((total - current) / total) * 100;
   }
 
@@ -90,6 +90,7 @@ class App extends Component {
           status = {this.getStatus()}
           progress = {this.getProgress()}
         />
+        
         <Controls
           start = {this.start}
           reset = {this.reset}
