@@ -12,6 +12,11 @@ body {
   background-color: rgb(241, 255, 250, 0.5)
 }
 
+html,
+body {
+    height: 100%;
+}
+
 /* button {
   padding: 0.5rem  2rem;
   background-color: #568259;
@@ -25,17 +30,28 @@ body {
   margin : 0.25rem
 } */
 
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TypeList button{
+    margin-right: 0.2rem
+}
+
+.TypeList {
+    margin-top: 3.5rem
+}
+
 .controls {
-  display: flex;
-  justify-content: center;
-  /* border: cornflowerblue solid 1px; */
 }
 
 .timerContainer {
   display: flex;
   position: relative;
-  height: 50vh;
-  margin-bottom: 15px;
+  height: 60vh;
+  margin: 1.5rem 0em;
   /* border: cornflowerblue solid 1px; */
 }
 

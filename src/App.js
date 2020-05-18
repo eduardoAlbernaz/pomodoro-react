@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Display from './components/Display';
 import Controls from './components/Controls';
+import TypeList from './components/TypeList'
 
 
 class App extends Component {
@@ -9,10 +10,24 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      time: 300,
+      selectedType: props.types[0],
+      time: props.types[0].time,
       interval: null,
       running: false,
     }
+  }
+
+  static defaultProps = {
+    types: [
+      { name: 'Pomodoro', time: 1500 },
+      { name: 'Short Break', time: 300 },
+      { name: 'Long Break', time: 600 }
+    ]
+  }
+
+  changeType = type => {
+    this.reset();
+    this.setState({ selectedType: type, time: type.time, running: false });
   }
 
   tick = () => {
@@ -58,10 +73,18 @@ class App extends Component {
   }
 
   render() {
-    const { time } = this.state
+    const { time, selectedType } = this.state
+    const { types } = this.props
 
     return (
       <div className="App">
+        
+        <TypeList
+        types = {types}
+        selected = {selectedType}
+        changeType = {this.changeType}
+        />
+
         <Display
           time = {time}
           status = {this.getStatus()}
