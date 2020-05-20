@@ -79,11 +79,11 @@ class App extends Component {
     return (
       <div className="App">
         
-        <TypeList
+        {/* <TypeList
         types = {types}
         selected = {selectedType}
         changeType = {this.changeType}
-        />
+        /> */}
 
         <Display
           time = {time}

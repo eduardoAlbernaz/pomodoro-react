@@ -13,13 +13,13 @@ const TimeDisplay = ({ time, status, progress }) => {
             maxValue={100}
             text={`${formatTime(time)}`}
             strokeWidth={2.5}
-            background
+            // background
             // backgroundPadding={6}
             styles={buildStyles({
                 backgroundColor: "white",
-                textColor: "#568259",
-                pathColor: "#568259",
-                trailColor: "#d9e6e1",
+                textColor: "#F2F0F3",
+                pathColor: "#F2F0F3",
+                trailColor: "#C17070",
               })}>
             </CircularProgressbar>
         </div>
