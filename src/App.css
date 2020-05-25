@@ -18,17 +18,52 @@ body {
     height: 100%;
 }
 
-button {
-  padding: 0.5rem  2rem;
-  background-color: #0081A7;
-  border: 0.15em solid #F2F0F3;
+.controls button {
+  /* background-color: #7603AF; */
   /* background: none; */
+  padding: 0.5rem  2rem;
+  border: 0.094em solid #F2F0F3;
+  outline: 0;
   color: #F2F0F3;
+  cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 2rem;
   margin : 0.25rem
+
+}
+
+.controls .start {
+    background-color: #609973;
+}
+
+.controls .reset {
+    background-color: #C17070;
+}
+
+.controls .pause {
+    background-color: #0081A7;
+}
+
+.controls .resume {
+    background-color: #609973;    
+}
+
+.controls .start:hover {
+    background-color: #4D7E5C;
+}
+
+.controls .reset:hover {
+    background-color: #A45A5A;
+}
+
+.controls .pause:hover {
+    background-color: #006A8E;
+}
+
+.controls .resume:hover {
+    background-color: #609973;    
 }
 
 .App {

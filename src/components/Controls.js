@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 const Controls = ({ start, reset, pause, status }) => (
     <div className="controls">
         {!status && (
-            <button onClick={start}>
+            <button onClick={start} className="start">
                 Start
             </button>
         )}
@@ -16,11 +16,12 @@ const Controls = ({ start, reset, pause, status }) => (
 
         {(status === 'Paused' || status === 'Running') && (
             <div>
-                <button onClick={reset}>
+                <button onClick={reset} className="reset">
                 Reset
                 </button>
                 
-                <button onClick={pause}>
+                <button onClick={pause}
+                className={status === 'Paused' ? 'resume' : 'pause'}>
                 {status === 'Paused' ? 'Resume' : 'Pause'}
                 </button>
             

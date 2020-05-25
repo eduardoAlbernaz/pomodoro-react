@@ -16,7 +16,7 @@ const TimeDisplay = ({ time, status, progress }) => {
             // background
             // backgroundPadding={6}
             styles={buildStyles({
-                backgroundColor: "white",
+            // backgroundColor: "white",
                 textColor: "#F2F0F3",
                 pathColor: "#F2F0F3",
                 trailColor: "#C17070",
