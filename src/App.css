@@ -10,7 +10,7 @@
 
 body {
   background: #F2433A;
-  background: linear-gradient(45deg, #F2433A 25%, #f2653a 100%);
+  background: linear-gradient(45deg, #F2433A 50%, #f2653a 100%);
 }
 
 html,
@@ -73,15 +73,29 @@ body {
 }
 
 .TypeList button{
-    margin-right: 0.2rem
+    padding: 0.5rem  1rem;
+    background: none;
+    border: 0.094rem solid #F2F0F3;
+    outline: 0;
+    color: #F2F0F3;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 0.5rem;
+    margin: 0.1rem;
+}
+
+.TypeList .active {
+    border: 0.094rem solid #F2433A;
+    background-color: #F2F0F3;
+    color: #F2433A;
 }
 
 .TypeList {
-    margin-top: 3.5rem
+    margin-top: 3rem
 }
 
-.controls {
-}
 
 .timerContainer {
   display: flex;

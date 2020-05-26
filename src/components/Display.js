@@ -4,7 +4,8 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-const TimeDisplay = ({ time, status, progress }) => {
+const TimeDisplay = ({ time, status, progress, selected }) => {
+    document.title = `(${formatTime(time)}) ${selected.name}`;
     return (
         <div className='timerContainer'>
             <CircularProgressbar 
