@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-const Controls = ({ start, reset, pause, status }) => (
+const Controls = ({ start, reset, pause, restart, status }) => (
     <div className="controls">
         {!status && (
             <button onClick={start} className="start">
@@ -9,8 +9,8 @@ const Controls = ({ start, reset, pause, status }) => (
         )}
 
         {status === 'Finished' && (
-            <button onClick={start} className="start">
-                Restart
+            <button onClick={restart} className="start">
+                Restart Pomodoro
             </button>
         )}
 

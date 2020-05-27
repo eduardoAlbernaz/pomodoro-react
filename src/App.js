@@ -70,6 +70,15 @@ class App extends Component {
         this.state.interval ? this.stopInterval() : this.start();
     };
 
+    restart = () => {
+        this.changeType(this.props.types[0])
+        this.setState(state => ({
+            running: true,
+            interval: setInterval(this.tick, 1000),
+            time: state.time > 0 ? state.time : state.selectedType.time
+        }))
+    }
+
     getStatus = () => {
         const { time, running, interval } = this.state;
         if (time === 0) return 'Finished';
@@ -107,6 +116,7 @@ class App extends Component {
                     start={this.start}
                     reset={this.reset}
                     pause={this.pause}
+                    restart={this.restart}
                     status={this.getStatus()}
                 />
             </div>
